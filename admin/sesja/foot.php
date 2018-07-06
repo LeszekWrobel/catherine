@@ -1,0 +1,1 @@
+echo 'include("foot.php")';

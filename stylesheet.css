@@ -1,0 +1,824 @@
+/* wykomentarzowano wszystkie wpisy z "display: none" w celu uniknięcia podejżenia o ukrywanie treści */
+
+
+
+/* span#caption, #captionflash {display: none;background-color: #fff;}
+ */
+.picturelist { padding: 0px !important}
+
+.thumb
+{
+	padding:4px !important;
+	text-decoration:none ;
+	line-height:normal;
+	list-style-type:none !important;
+	text-align:center;
+	float:left;
+        background: none !important;
+
+}
+
+.thumb a
+{
+margin:0;
+text-decoration:none;
+}
+.albumcomment { text-align: left; padding-left:6px;}
+
+.thumb a img {   border: 1px solid #FFFFFF ;}
+
+.thumb a:hover img
+{ border: 1px #dae6e4 solid !important;}
+
+
+.albumname
+{
+	font-size:11px;
+	text-align:center !important;
+	font-weight:bold;
+	font-style:normal;
+	margin-bottom: 0px !important;
+	display: block;
+        padding-top:20px;
+}
+.albumpicturecount
+{
+float:none !important;
+	font-size:10px;
+	text-align:center;
+	font-weight:normal;
+	font-style:italic;
+        text-align:center;
+}
+
+.albumcomment
+{
+	text-align:center;
+	font-weight:normal;
+	font-style:normal;
+}
+
+.albumnav
+{
+	text-align:center;
+	font-weight:normal;
+	font-style:normal;
+	font-size:smaller;
+}
+
+.instructiontext
+{
+	font-weight:normal;
+	font-style:normal;
+	font-size:smaller;
+	font-style:italic;
+}
+
+/* Big Picture */
+.bigpicture
+{
+	padding:0.5em 0 0;
+	clear:left;
+	border-top:1px solid #ccc;
+	text-align:center;
+}
+
+.bigpicturecaption
+{
+
+	text-align:center;
+	margin:0 0 5px;
+	padding:0;
+}
+
+.bigpicture img
+{
+	padding:18px;
+	width:80%;
+	margin:0;
+	background-color:white;
+	border-top:1px solid #eee;
+	border-right:2px solid #ccc;
+	border-bottom:2px solid #ccc;
+	border-left:1px solid #eee;
+	text-decoration:none;
+}
+
+.bigpicturenav
+{
+	margin:0;
+	padding:0;
+	color:#000001;
+	font-size:smaller;
+	line-height:normal;
+}
+
+
+
+/* Default + komentarz */
+
+.picturelist .comment {
+width:48%;
+float:left;
+height:115px;
+overflow:hidden;
+margin-bottom:10px;
+}
+
+.picturelist .comment a {margin:0; padding:0;}
+
+.picturelist .comment img {display:block; margin:0 auto;}
+
+.picturelist .comment p {text-align:left;}
+
+/* CSS for Lightbox follows */
+#lightbox, #lightboxflash{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    line-height: 0;
+    }
+
+#lightbox a, #lightboxflash a {
+    outline: none;
+}
+
+#lightbox a img, #lightboxflash a img{ border: none; display:block; margin:0;}
+
+
+#loadingLink img, #loadingLinkFlash img { border: none; display:block; margin:20% auto !important;}
+
+#outerImageContainer, #outerImageContainerFlash{
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    }
+
+#imageContainer, #imageContainerFlash{
+    padding: 10px;
+    position: relative;
+    }
+    
+#imageContainer img, #imageContainer img {border: 1px solid #EFEFEF;}
+
+#loading, #loadingFlash{
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+	}
+
+* html #loading {position:relative; top:0;}
+
+#hoverNav, #hoverNavFlash{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    }
+#imageContainer>#hoverNav, #imageContainerFlash>#hoverNavFlash{ left: 0;}
+#hoverNav a, #hoverNavflash a{ outline: none;}
+
+#prevLink, #nextLink, #prevLinkFlash, #nextLinkFlash{
+    width: 49%;
+    height: 100%;
+    /* background: transparent url(modules/Album/templates/db/lightbox/images/blank.gif) no-repeat; *//* Trick IE into showing hover */
+    display: block;
+    }
+#prevLink, #prevLinkFlash { left: 0; float: left;}
+#nextLink, #nextLinkFlash { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover, #prevLinkFlash:hover, #prevLinkFlash:visited:hover { /* background: url(..modules/Album/templates/db/lightbox/images/prevlabel.gif) left 15% no-repeat; */ }
+#nextLink:hover, #nextLink:visited:hover, #nextLinkFlash:hover, #nextLinkFlash:visited:hover { /* background: url(..modules/Album/templates/db/lightbox/images/prevlabel.gif) right 15% no-repeat; */ }
+
+
+
+#imageData, #imageDataFlash{ padding: 10px 10px 0; color: #666; }
+#imageData #imageDetails, #imageDataFlash #imageDetailsFlash{ width: 70%; float: left; text-align: left; }  
+#imageData #caption, #imageDataFlash #captionFlash{ font-weight: bold; }
+/* #imageData #numberDisplay, #imageDataFlash #numberDisplayFlash{ display: none; clear: left; padding-bottom: 1.0em;  }           
+ */#imageData #bottomNavClose, #imageDataFlash #bottomNavCloseFlash {float: right;}
+#imageData #bottomNavClose img, #imageDataFlash #bottomNavCloseFlash img {width: 66px; height: 22px;}
+
+#bottomNav, #bottomNavFlash {float: right; width: 100%;}
+#bottomNav a, #bottomNavFlash a {float: left; color: #FF5100; padding-left: 5px; padding-right: 5px; border-left: 1px solid #696969; line-height: 5px; line-height: 18px;}
+#bottomNav a.first, #bottomNavFlash a.first {border: none !important;}
+#bottomNav a#nextBottomBtn, a#prevBottomBtn, a#bottomNavClose, #bottomNavFlash a#nextBottomBtnFlash, a#prevBottomBtnFlash, a#bottomNavCloseFlash {border: none; cursor: pointer;}
+#bottomNav a.active, #bottomNavFlash a.active {color: #696969 !important; font-weight: bold;}   
+#bottomNav ul li, #bottomNavFlash ul li {float: left;}
+
+#bottomNav a#sl0, #bottomNavFlash a#sl0 {border: none;}
+#lightbox #bottomNav a.active, #lightbox #bottomNavFlash a.active, #imageLinksNav a.active, #bottomNav a#sl0.active, #bottomNavFlash a#sl0.active {color:#696969 !important; font-weight:bold;}
+#imageLinksNav {list-style: none;}        
+
+#lightbox #imageDataContainer #imageData #bottomNav #imageLinksNav .active {color:#696969 !important;}
+
+#overlay, #overlayFlash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 550px;
+    background-color: #000;
+    }
+* html #overlay {position:absolute;}
+* html #overlayFlash{position: absolute;}
+
+
+ul.screens li {list-style:none;}
+
+img#lightboxImage, img#lightboxImageFlash {margin-top: 0px !important;}
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+
+
+
+* html>body .clearfix {
+	display: inline-block;
+	width: 100%;
+	}
+
+* html .clearfix {
+	/* Hides from IE-mac \*/
+	height: 1%;
+	/* End hide from IE-mac */
+	}
+/* Last-Modified: 28/06/06 00:08:22 */
+#GB_overlay {
+    background-color: #000;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#GB_window {
+    left: 0;
+    top: 0;
+    font-size: 1px;
+    position: absolute;
+    overflow: visible;
+    z-index: 150;
+}
+
+#GB_window .content {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#GB_frame {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+
+.GB_Gallery {
+    margin: 0 22px 0 22px;
+}
+
+.GB_Gallery .content {
+    background-color: #fff;
+    border: 3px solid #ddd;
+}
+
+.GB_header {
+    top: 10px;
+    left: 0;
+    margin: 0;
+    z-index: 500;
+    position: absolute;
+    border-bottom: 2px solid #555;
+    border-top: 2px solid #555;
+}
+
+.GB_header .inner {
+    background-color: #333;
+    font-family: Arial, Verdana, sans-serif;
+    padding: 2px 20px 2px 20px;
+}
+
+.GB_header table {
+    margin: 0;
+    width: 97%;
+    border-collapse: collapse;
+}
+
+.GB_header .caption {
+    text-align: left;
+    color: #eee;
+    white-space: nowrap;
+    font-size: 20px;
+
+
+}
+
+.GB_header .close {
+    text-align: right;
+}
+
+.GB_header .close img {
+    z-index: 500;
+    cursor: pointer;
+}
+
+.GB_header .middle {
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+#GB_middle {
+    color: #eee;
+}
+
+#GB_middle img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#GB_middle .disabled {
+    cursor: default;
+}
+
+#GB_middle .left {
+    padding-right: 10px;
+}
+
+#GB_middle .right {
+    padding-left: 10px;
+}
+
+
+.GB_Window .content {
+    background-color: #fff;
+    border: 3px solid #ccc;
+    border-top: none;
+}
+
+.GB_Window .header {
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #999;
+    border-left: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+    margin: 0;
+
+    height: 22px;
+    font-size: 12px;
+    padding: 3px 0;
+    color: #334;/* 333 */
+}
+
+.GB_Window .caption {
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.GB_Window .close { text-align: right; }
+.GB_Window .close span {
+    font-size: 12px;
+    cursor: pointer;
+}
+.GB_Window .close img {
+    cursor: pointer;
+    padding: 0 3px 0 0;
+}
+
+.GB_Window .on { border-bottom: 1px solid #333; }
+.GB_Window .click { border-bottom: 1px solid red; }
+
+/* Start of CMSMS style sheet '02.1 Gallery CMotion horizontal' */
+
+
+/* CMOTION GALLERY */
+
+
+
+/* Please check gallerystyle.css and motiongallery.js for double-/hard-codings! */
+
+
+
+div.largeview {
+
+ text-align: center;
+
+}
+
+
+
+#motioncontainer {
+
+margin-top: 5px;
+
+height: 70px; /* according to gallery height */
+
+width: 99.99%;
+
+}
+
+
+
+#motioncontainer a img {
+
+border: 0; /* Set image border color */
+
+margin: 0; /* chage this if you want some air inbetween images*/
+
+height: 60px;
+
+width:auto;
+
+}
+
+
+
+/* change cursor when clicking on image */
+
+/*#motioncontainer a:active img {
+
+cursor: progress;
+
+}*/
+
+
+
+#statusdiv {
+
+background-color: #fff;
+
+color: #FFBF00;/*#8f8f8f;*/
+
+font-size: 65%;
+
+font-weight: bold;
+
+border: 0px solid #afafaf;
+
+padding: .1em;
+
+width: 100px;
+
+position: absolute; /* Stop Editing Gallery Styles */
+
+top: -10px;
+
+left: 0px;
+
+visibility: hidden;
+
+}
+
+
+
+#motioncontainer a:hover {
+
+color: red; /* Dummy definition to overcome IE bug */
+
+}
+
+
+
+/* Those are already set in the template using
+
+the "style"-tag for both of the divs. It seems to
+
+work only this way - if someone could tell me why,
+
+I'll appreciate!  */
+
+/*
+
+div#motioncontainer {
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+div#motiongallery {
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+white-space: nowrap;
+
+}*/
+
+
+
+/* END CMOTION GALLERY */
+
+/* End of '02.1 Gallery CMotion horizontal' */
+
+
+/* jquery lightbox */
+
+#jquery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+}
+#jquery-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+}
+#jquery-lightbox a img { border: none; }
+#lightbox-container-image-box {
+	position: relative;
+	background-color: #fff;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading {
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+
+#lightbox-loading img {display:block; margin:0 auto;}
+#lightbox-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	width: 49%;
+	height: 100%;
+	display: block;
+}
+#lightbox-nav-btnPrev { 
+	left: 0; 
+	float: left;
+}
+#lightbox-nav-btnNext { 
+	right: 0; 
+	float: right;
+}
+#lightbox-container-image-data-box {
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%;
+	padding: 0 10px 0;
+}
+#lightbox-container-image-data {
+	padding: 0 10px; 
+	color: #666; 
+}
+#lightbox-container-image-data #lightbox-image-details { 
+	width: 70%; 
+	float: left; 
+	text-align: left; 
+}	
+#lightbox-image-details-caption { font-weight: bold; }
+#lightbox-image-details-currentNumber {
+	display: block; 
+	clear: left; 
+	padding-bottom: 1.0em;	
+}			
+#lightbox-secNav-btnClose {
+	width: 66px; 
+	float: right;
+	padding-bottom: 0.7em;	
+}
+
+/* tło lightboxa */
+
+#lbOverlay { position: fixed; top: 0; left: 0; z-index: 99998; width: 100%; height: 500px; }
+	#lbOverlay.grey { background-color: #000000; }/* kolor tła strony wokół zdjęcia */
+	#lbOverlay.red { background-color: #330000; }
+	#lbOverlay.green { background-color: #003300; }
+	#lbOverlay.blue { background-color: #011D50; }
+	#lbOverlay.gold { background-color: #666600; }
+
+#lbMain { position: absolute; left: 0; width: 100%; z-index: 99999; text-align: center; line-height: 0; }
+#lbMain a img { border: none; }
+
+#lbOuterContainer { position: relative; background-color: #121212; width: 200px; height: 200px; margin: 0 auto; }/* kolor obramowania zdjęcia */
+	#lbOuterContainer.grey { border: 3px solid #000000; }/* kolor ramki wokół obramowania */
+	#lbOuterContainer.red { border: 3px solid #DD0000; }
+	#lbOuterContainer.green { border: 3px solid #00B000; }
+	#lbOuterContainer.blue { border: 3px solid #5F89D8; }
+	#lbOuterContainer.gold { border: 3px solid #B0B000; }
+
+#lbDetailsContainer {	font: 10px Verdana, Helvetica, sans-serif; background-color: #121212;/* kolor tła pod napisy pod zdjęciem */
+ width: 100%; line-height: 1.4em;	overflow: auto; margin: 0 auto; color: #000; }
+	#lbDetailsContainer.grey { border: 3px solid #000000; border-top: none; }/* kolor ramki wokół tła pod napisami */
+	#lbDetailsContainer.red { border: 3px solid #DD0000; border-top: none; }
+	#lbDetailsContainer.green { border: 3px solid #00B000; border-top: none; }
+	#lbDetailsContainer.blue { border: 3px solid #5F89D8; border-top: none; }
+	#lbDetailsContainer.gold { border: 3px solid #B0B000; border-top: none; }
+
+#lbImageContainer, #lbIframeContainer { padding: 10px; }
+#lbLoading {
+	position: absolute; top: 45%; left: 0%; height: 32px; width: 100%; text-align: center; line-height: 0; background: url(uploads/js/lytebox/images/loading.gif) center no-repeat;
+}
+
+#lbHoverNav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }/* pozycja przycisków przewijania */
+#lbImageContainer>#lbHoverNav { left: 0; }
+#lbHoverNav a { outline: none; }
+
+#lbPrev { width: 49%; height: 100%; background: transparent url(uploads/js/lytebox/images/blank.gif) no-repeat; display: block; left: 0; float: left; }
+#lbPrev:hover
+{ background: url(uploads/js/lytebox/images/prev_grey.gif) left 15% no-repeat; }
+	#lbPrev.grey:hover, #lbPrev.grey:visited:hover { background: url(uploads/js/lytebox/images/prev_grey.gif) left 15% no-repeat; }
+	#lbPrev.red:hover, #lbPrev.red:visited:hover { background: url(uploads/js/lytebox/images/prev_red.gif) left 15% no-repeat; }
+	#lbPrev.green:hover, #lbPrev.green:visited:hover { background: url(uploads/js/lytebox/images/prev_green.gif) left 15% no-repeat; }
+	#lbPrev.blue:hover, #lbPrev.blue:visited:hover { background: url(uploads/js/lytebox/images/prev_blue.gif) left 15% no-repeat; }
+	#lbPrev.gold:hover, #lbPrev.gold:visited:hover { background: url(uploads/js/lytebox/images/prev_gold.gif) left 15% no-repeat; }
+	
+#lbNext { width: 49%; height: 100%; background: transparent url(uploads/js/lytebox/images/blank.gif) no-repeat; display: block; right: 0; float: right; }
+#lbNext:hover{
+background: url(uploads/js/lytebox/images/next_grey.gif) right 15% no-repeat; }
+
+	#lbNext.grey:hover, #lbNext.grey:visited:hover { background: url(uploads/js/lytebox/images/next_grey.gif) right 15% no-repeat; }
+	#lbNext.red:hover, #lbNext.red:visited:hover { background: url(uploads/js/lytebox/images/next_red.gif) right 15% no-repeat; }
+	#lbNext.green:hover, #lbNext.green:visited:hover { background: url(uploads/js/lytebox/images/next_green.gif) right 15% no-repeat; }
+	#lbNext.blue:hover, #lbNext.blue:visited:hover { background: url(uploads/js/lytebox/images/next_blue.gif) right 15% no-repeat; }
+	#lbNext.gold:hover, #lbNext.gold:visited:hover { background: url(uploads/js/lytebox/images/next_gold.gif) right 15% no-repeat; }
+
+#lbPrev2, #lbNext2 { text-decoration: none; font-weight: bold; }
+	#lbPrev2.grey, #lbNext2.grey, #lbSpacer.grey { color: #333334; }/* było 333333 */
+	#lbPrev2.red, #lbNext2.red, #lbSpacer.red { color: #620000; }
+	#lbPrev2.green, #lbNext2.green, #lbSpacer.green { color: #003301; }/* 003300 */
+	#lbPrev2.blue, #lbNext2.blue, #lbSpacer.blue { color: #01379E; }
+	#lbPrev2.gold, #lbNext2.gold, #lbSpacer.gold { color: #666601; }/* 666600 */
+	
+#lbPrev2_Off, #lbNext2_Off { font-weight: bold; }
+	#lbPrev2_Off.grey, #lbNext2_Off.grey { color: #CCCCCC; }
+	#lbPrev2_Off.red, #lbNext2_Off.red { color: #FFCCCC; }
+	#lbPrev2_Off.green, #lbNext2_Off.green { color: #82FF82; }
+	#lbPrev2_Off.blue, #lbNext2_Off.blue { color: #B7CAEE; }
+	#lbPrev2_Off.gold, #lbNext2_Off.gold { color: #E1E100; }
+	
+#lbDetailsData { padding: 0 10px; }
+	#lbDetailsData.grey { color: #424242; }/* kolor tekstu "image x of xx" */
+	#lbDetailsData.red { color: #620000; }
+	#lbDetailsData.green { color: #003301; }/* było #003300 */
+	#lbDetailsData.blue { color: #01379E; }
+	#lbDetailsData.gold { color: #666601; }/* #666600 */
+	
+#lbDetails { width: 85%; float: left; text-align: left; }/* pozycjonowanie tekstu z atrybutu title */
+#lbCaption { display: block; font-weight: bold; color: #9F9F9F; font-size: 1.1em}/* kolor tekstu z atrybutu "title" */
+#lbNumberDisplay { float: left; display: block; padding-bottom: 1.0em; }
+#lbNavDisplay { float: left; display: block; padding-bottom: 1.0em; }
+
+/* pozycjonowanie X */
+#lbClose { width: 30px; height: 30px; float: right; margin-bottom: 1px;  background: url("uploads/js/lytebox/images/close_grey.png") no-repeat scroll 0 0 transparent; }
+	#lbClose.grey { background: url(uploads/js/lytebox/images/close_grey.png) no-repeat; }
+	#lbClose.red { background: url(uploads/js/lytebox/images/close_red.png) no-repeat; }
+	#lbClose.green { background: url(uploads/js/lytebox/images/close_green.png) no-repeat; }
+	#lbClose.blue { background: url(uploads/js/lytebox/images/close_blue.png) no-repeat; }
+	#lbClose.gold { background: url(uploads/js/lytebox/images/close_gold.png) no-repeat; }
+
+#lbPlay { width: 64px; height: 28px; float: right; margin-bottom: 1px; }
+	#lbPlay.grey { background: url(uploads/js/lytebox/images/play_grey.png) no-repeat; }
+	#lbPlay.red { background: url(uploads/js/lytebox/images/play_red.png) no-repeat; }
+	#lbPlay.green { background: url(uploads/js/lytebox/images/play_green.png) no-repeat; }
+	#lbPlay.blue { background: url(uploads/js/lytebox/images/play_blue.png) no-repeat; }
+	#lbPlay.gold { background: url(uploads/js/lytebox/images/play_gold.png) no-repeat; }
+	
+#lbPause { width: 64px; height: 28px; float: right; margin-bottom: 1px; }
+	#lbPause.grey { background: url(uploads/js/lytebox/images/pause_grey.png) no-repeat; }
+	#lbPause.red { background: url(uploads/js/lytebox/images/pause_red.png) no-repeat; }
+	#lbPause.green { background: url(uploads/js/lytebox/images/pause_green.png) no-repeat; }
+	#lbPause.blue { background: url(uploads/js/lytebox/images/pause_blue.png) no-repeat; }
+	#lbPause.gold { background: url(uploads/js/lytebox/images/pause_gold.png) no-repeat; }
+/* End of 'Galeria' */
+
+/* Start of CMSMS style sheet 'Menu poziome wyskakujace' */
+/* Horizontal menu for the CMS CSS Menu Module */
+/* by Alexander Endresen */
+
+#menu_vert {
+   margin-left: 1px;
+   margin-right: 1px;
+}
+
+
+
+/* Set the width of the menu elements at second level. Leaving first level flexible. */
+/* Unless you know what you do, do not touch this */ 
+#primary-nav, #primary-nav ul { 
+   list-style: none; 
+   margin: 0px; 
+   padding: 0px;
+}
+#primary-nav li a { 
+display: block;
+}
+#primary-nav li li a { 
+
+}	
+#primary-nav li, #primary-nav li.menuparent { 
+
+}
+
+/* Styling the basic apperance of the active page elements (shows what page in the menu is being displayed) */
+
+#primary-nav li.menuactive { 
+
+}
+
+
+/* Styling the basic apperance of the menuparents - here styled the same on hover (fixes IE bug) */
+#primary-nav ul li.menuparent, 
+#primary-nav ul li.menuparent:hover, 
+#primary-nav ul li.menuparenth { 
+/* arrow for menuparents */
+
+}
+
+
+/* Styling the apperance of menu items on hover */
+
+#primary-nav li:hover, 
+#primary-nav li.menuh, 
+#primary-nav li.menuparenth, 
+#primary-nav li.menuactiveh { 
+}
+
+
+/* The magic - set to work for up to a 3 level menu, but can be increased unlimited */
+
+#primary-nav li:hover ul ul, 
+#primary-nav li.menuparenth ul ul ul,
+#primary-nav ul, 
+#primary-nav li:hover ul, 
+#primary-nav li:hover ul ul, 
+#primary-nav li:hover ul ul ul, 
+#primary-nav li.menuparenth ul, 
+#primary-nav li.menuparenth ul ul { 
+/*    display: none; 
+ */}
+
+#primary-nav ul ul ul li:hover ul, 
+#primary-nav ul ul ul li.menuparenth ul,
+#primary-nav li:hover ul, 
+#primary-nav ul li:hover ul, 
+#primary-nav ul ul li:hover ul, 
+#primary-nav li.menuparenth ul, 
+#primary-nav ul li.menuparenth ul, 
+#primary-nav ul ul li.menuparenth ul { 
+   display: block; 
+}
+
+
+/* IE Hacks */
+#primary-nav li li { 
+   float: left; 
+   clear: both; 
+}
+#primary-nav li li a { 
+   height: 1%; 
+}
+/* End of 'Menu poziome wyskakujace' */
+
